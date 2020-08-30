@@ -1,9 +1,16 @@
+![Cover](images/chibi-godette-cutout.png)
+
 # WHAT IS CHIBI GODETTE CUTOUT?
 
-Chibi Godette Cutout is a game asset base on Godette, a character made by Andrea Calabrò for the Godot game engine, under CC BY 4.0 International license. And as the name of this asset suggests, it is a chibi(short/small) and a cutout version of the original artwork.
+Chibi Godette Cutout is a game asset base on [Godette](https://github.com/godotengine/godot-design/tree/master/godette), a character made by Andrea Calabrò for the [Godot](https://godotengine.org/) game engine, under [CC BY 4.0 International license](https://github.com/godotengine/godot-design/blob/master/LICENSE). And as the name of this asset suggests, it is a chibi(short/small) and a cutout version of the original artwork.
 
 
 # VIDEO PREVIEW
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=Q7U6fhDBsGo" target="_blank"><img src="http://img.youtube.com/vi/Q7U6fhDBsGo/0.jpg" 
+alt="IMAGE ALT TEXT HERE" width="853" height="480" border="10" /></a>
+
+
+[![DOWNLOAD](images/chibi-godette-cutout-download.png)](https://croben.itch.io/chibi-godette-cutout/purchase?popup=1)
 
 
 # ASSET CONTENTS
@@ -37,29 +44,30 @@ Chibi Godette Cutout is a game asset base on Godette, a character made by Andrea
 
 # HOW TO IMPORT?
 
-With Godot open
+### With Godot open
+   - Go to “AssetLib”
+   - Click “Import”
+   - Locate “Godot-Chibi-Godette-Cutout.zip”
+   - Click “Open”
+   - Click “Install”
 
-    - Go to “AssetLib”
-    - Click “Import”
-    - Locate “Godot-Chibi-Godette-Cutout.zip”
-    - Click “Open”
-    - Click “Install”
-
-With Unity open
-
-    - Click “Assets”
-    - Go to “Import Package”
-    - Click “Custom Package…”
-    - Locate “Unity-Chibi-Godette-Cutout.unitypackage”
-    - Click “Open”
-    - Click “Import”
+### With Unity open
+   - Click “Assets”
+   - Go to “Import Package”
+   - Click “Custom Package…”
+   - Locate “Unity-Chibi-Godette-Cutout.unitypackage”
+   - Click “Open”
+   - Click “Import”
 
 
 # FRIENDLY TIPS
 
 1. Create A “Sprite Atlas”
-    - On Godot follow this guide https://godotengine.org/article/atlas-support-returns-godot-3-2
-    - On Unity follow this guide https://docs.unity3d.com/Manual/SpriteAtlasWorkflow.html
+    - On Godot follow this [guide](https://godotengine.org/article/atlas-support-returns-godot-3-2)
+    - On Unity follow this [guide](https://docs.unity3d.com/Manual/SpriteAtlasWorkflow.html)
 
 2. Smaller Size In Unity
     - To have a smaller size variant in Unity, simply override the “Max Size” then scale down the graphic of the prefab.
+    
+    
+[![DOWNLOAD](images/chibi-godette-cutout-download.png)](https://croben.itch.io/chibi-godette-cutout/purchase?popup=1)
