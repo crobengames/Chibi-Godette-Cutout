@@ -1,0 +1,615 @@
+[gd_scene load_steps=60 format=2]
+
+[ext_resource path="res://Chibi Godette Cutout/Scripts/chibi_godette.gd" type="Script" id=1]
+[ext_resource path="res://Chibi Godette Cutout/Animation/Anim-128x256/FallAnim128x256.tres" type="Animation" id=2]
+[ext_resource path="res://Chibi Godette Cutout/Scenes/Chibi-Godette-256x512.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Chibi Godette Cutout/Animation/Anim-128x256/JumpAnim128x256.tres" type="Animation" id=4]
+[ext_resource path="res://Chibi Godette Cutout/Animation/Anim-128x256/WalkAnim128x256.tres" type="Animation" id=5]
+[ext_resource path="res://Chibi Godette Cutout/Art/Chibi Godette Cutout 128 x 256/Neck.png" type="Texture" id=6]
+[ext_resource path="res://Chibi Godette Cutout/Art/Chibi Godette Cutout 128 x 256/Foot.png" type="Texture" id=7]
+[ext_resource path="res://Chibi Godette Cutout/Art/Chibi Godette Cutout 128 x 256/Leg-Left-Top.png" type="Texture" id=8]
+[ext_resource path="res://Chibi Godette Cutout/Art/Chibi Godette Cutout 128 x 256/Extra-Left.png" type="Texture" id=9]
+[ext_resource path="res://Chibi Godette Cutout/Art/Chibi Godette Cutout 128 x 256/Hand-Left.png" type="Texture" id=10]
+[ext_resource path="res://Chibi Godette Cutout/Art/Center-Fill.png" type="Texture" id=11]
+[ext_resource path="res://Chibi Godette Cutout/Art/Chibi Godette Cutout 128 x 256/Hand-Right.png" type="Texture" id=12]
+[ext_resource path="res://Chibi Godette Cutout/Art/Chibi Godette Cutout 128 x 256/Mask-Left.png" type="Texture" id=13]
+[ext_resource path="res://Chibi Godette Cutout/Art/Chibi Godette Cutout 128 x 256/Leg-Right-Top.png" type="Texture" id=14]
+[ext_resource path="res://Chibi Godette Cutout/Art/Chibi Godette Cutout 128 x 256/Leg-Left-Bot.png" type="Texture" id=15]
+[ext_resource path="res://Chibi Godette Cutout/Art/Chibi Godette Cutout 128 x 256/Mask-Right.png" type="Texture" id=16]
+[ext_resource path="res://Chibi Godette Cutout/Art/Chibi Godette Cutout 128 x 256/Face.png" type="Texture" id=17]
+[ext_resource path="res://Chibi Godette Cutout/Art/Chibi Godette Cutout 128 x 256/Leg-Right-Bot.png" type="Texture" id=18]
+[ext_resource path="res://Chibi Godette Cutout/Art/Chibi Godette Cutout 128 x 256/Arm-Left.png" type="Texture" id=19]
+[ext_resource path="res://Chibi Godette Cutout/Art/Chibi Godette Cutout 128 x 256/Arm-Right.png" type="Texture" id=20]
+[ext_resource path="res://Chibi Godette Cutout/Art/Top-Center-Fill.png" type="Texture" id=21]
+[ext_resource path="res://Chibi Godette Cutout/Art/Chibi Godette Cutout 128 x 256/Body.png" type="Texture" id=22]
+[ext_resource path="res://Chibi Godette Cutout/Animation/Anim-128x256/Dash2Anim128x256.tres" type="Animation" id=23]
+[ext_resource path="res://Chibi Godette Cutout/Animation/Anim-128x256/RunAnim128x256.tres" type="Animation" id=24]
+[ext_resource path="res://Chibi Godette Cutout/Animation/Anim-128x256/DeathAnim128x256.tres" type="Animation" id=25]
+[ext_resource path="res://Chibi Godette Cutout/Animation/Anim-128x256/IdleAnim128x256.tres" type="Animation" id=26]
+[ext_resource path="res://Chibi Godette Cutout/Scripts/demo_controller.gd" type="Script" id=27]
+[ext_resource path="res://Chibi Godette Cutout/Scenes/Chibi-Godette-512-1024.tscn" type="PackedScene" id=28]
+[ext_resource path="res://Chibi Godette Cutout/Art/Title.png" type="Texture" id=29]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 21, 112 )
+
+[sub_resource type="AnimationNodeAnimation" id=2]
+animation = "Dash"
+
+[sub_resource type="AnimationNodeAnimation" id=3]
+animation = "Death"
+
+[sub_resource type="AnimationNodeAnimation" id=4]
+animation = "Fall"
+
+[sub_resource type="AnimationNodeAnimation" id=5]
+animation = "Idle"
+
+[sub_resource type="AnimationNodeAnimation" id=6]
+animation = "Jump"
+
+[sub_resource type="AnimationNodeAnimation" id=7]
+animation = "Run"
+
+[sub_resource type="AnimationNodeAnimation" id=8]
+animation = "Walk"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=9]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=10]
+xfade_time = 0.05
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=11]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=12]
+xfade_time = 0.1
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=13]
+xfade_time = 0.1
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=14]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=15]
+xfade_time = 0.05
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=16]
+xfade_time = 0.05
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=17]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=18]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=19]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=20]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=21]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=22]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=23]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=24]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=25]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=26]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=27]
+
+[sub_resource type="AnimationNodeStateMachine" id=28]
+states/Dash/node = SubResource( 2 )
+states/Dash/position = Vector2( 412.734, 590.124 )
+states/Death/node = SubResource( 3 )
+states/Death/position = Vector2( 208, 329.627 )
+states/Fall/node = SubResource( 4 )
+states/Fall/position = Vector2( 564, 22 )
+states/Idle/node = SubResource( 5 )
+states/Idle/position = Vector2( 999, 165 )
+states/Jump/node = SubResource( 6 )
+states/Jump/position = Vector2( 407, -145 )
+states/Run/node = SubResource( 7 )
+states/Run/position = Vector2( -100, 184 )
+states/Walk/node = SubResource( 8 )
+states/Walk/position = Vector2( 1039.73, 250.124 )
+transitions = [ "Idle", "Run", SubResource( 9 ), "Run", "Idle", SubResource( 10 ), "Idle", "Jump", SubResource( 11 ), "Run", "Jump", SubResource( 12 ), "Jump", "Fall", SubResource( 13 ), "Fall", "Idle", SubResource( 14 ), "Run", "Fall", SubResource( 15 ), "Idle", "Fall", SubResource( 16 ), "Fall", "Death", SubResource( 17 ), "Idle", "Death", SubResource( 18 ), "Run", "Death", SubResource( 19 ), "Idle", "Walk", SubResource( 20 ), "Walk", "Idle", SubResource( 21 ), "Dash", "Fall", SubResource( 22 ), "Dash", "Jump", SubResource( 23 ), "Dash", "Idle", SubResource( 24 ), "Run", "Dash", SubResource( 25 ), "Idle", "Dash", SubResource( 26 ), "Dash", "Death", SubResource( 27 ) ]
+start_node = "Idle"
+graph_offset = Vector2( -87.266, -172.876 )
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=29]
+
+[sub_resource type="RectangleShape2D" id=30]
+extents = Vector2( 384, 24 )
+
+[node name="Demo" type="Node2D"]
+position = Vector2( 640, 0 )
+script = ExtResource( 27 )
+
+[node name="Chibi-Godette-128x256" type="KinematicBody2D" parent="."]
+position = Vector2( -836, 411 )
+z_index = 3
+collision_mask = 2
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Graphic" type="Node2D" parent="Chibi-Godette-128x256"]
+position = Vector2( -0.0625, 8.70013 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Body" type="Sprite" parent="Chibi-Godette-128x256/Graphic"]
+position = Vector2( 0, 0.8 )
+rotation = 0.0349066
+z_index = 1
+texture = ExtResource( 22 )
+
+[node name="Neck" type="Sprite" parent="Chibi-Godette-128x256/Graphic/Body"]
+position = Vector2( 0.334076, -36.143 )
+rotation = 0.0261799
+z_index = -1
+texture = ExtResource( 6 )
+
+[node name="Face" type="Sprite" parent="Chibi-Godette-128x256/Graphic/Body/Neck"]
+position = Vector2( -10.0957, -49.2887 )
+z_index = 3
+texture = ExtResource( 17 )
+
+[node name="Arm-Right-Up" type="Sprite" parent="Chibi-Godette-128x256/Graphic/Body"]
+position = Vector2( 12.4483, -23.8104 )
+rotation = -0.10472
+z_index = -1
+texture = ExtResource( 20 )
+offset = Vector2( -0.618535, 14.4798 )
+
+[node name="Hand-Right" type="Sprite" parent="Chibi-Godette-128x256/Graphic/Body/Arm-Right-Up"]
+position = Vector2( 1.60196, 31.5883 )
+rotation = 0.026359
+texture = ExtResource( 12 )
+offset = Vector2( 8.66032, 17.8287 )
+
+[node name="Arm-Left-Up" type="Sprite" parent="Chibi-Godette-128x256/Graphic/Body"]
+position = Vector2( -13.4558, -24.5019 )
+rotation = 0.10472
+z_index = 5
+texture = ExtResource( 19 )
+offset = Vector2( -2.49409, 14.849 )
+
+[node name="Hand-Left" type="Sprite" parent="Chibi-Godette-128x256/Graphic/Body/Arm-Left-Up"]
+position = Vector2( -4.03992, 31.4232 )
+rotation = -0.218166
+z_index = 6
+texture = ExtResource( 10 )
+offset = Vector2( 1.28168, 18.2164 )
+
+[node name="Leg-Right-Up" type="Sprite" parent="Chibi-Godette-128x256/Graphic/Body"]
+position = Vector2( 5.6, 22 )
+rotation = -0.349066
+z_index = 1
+texture = ExtResource( 14 )
+offset = Vector2( 0.00240326, 19.4748 )
+
+[node name="Leg-Right-Bot" type="Sprite" parent="Chibi-Godette-128x256/Graphic/Body/Leg-Right-Up"]
+position = Vector2( -0.6, 40.983 )
+rotation = 0.301493
+texture = ExtResource( 18 )
+offset = Vector2( -1.24331, 17.484 )
+
+[node name="Foot-Right" type="Sprite" parent="Chibi-Godette-128x256/Graphic/Body/Leg-Right-Up/Leg-Right-Bot"]
+position = Vector2( -5.9778, 35.8566 )
+texture = ExtResource( 7 )
+offset = Vector2( 8.19844, -0.834656 )
+
+[node name="Leg-Left-Up" type="Sprite" parent="Chibi-Godette-128x256/Graphic/Body"]
+position = Vector2( -6.3, 22 )
+rotation = 0.00523599
+z_index = 4
+texture = ExtResource( 8 )
+offset = Vector2( 0.00240326, 19.4748 )
+
+[node name="Leg-Left-Bot" type="Sprite" parent="Chibi-Godette-128x256/Graphic/Body/Leg-Left-Up"]
+position = Vector2( -0.6, 40.983 )
+rotation = 0.0959931
+texture = ExtResource( 15 )
+offset = Vector2( -1.24331, 17.484 )
+
+[node name="Foot-Left" type="Sprite" parent="Chibi-Godette-128x256/Graphic/Body/Leg-Left-Up/Leg-Left-Bot"]
+position = Vector2( -5.9778, 35.8566 )
+rotation = -0.124227
+texture = ExtResource( 7 )
+offset = Vector2( 8.19844, -0.834656 )
+
+[node name="Pants-Left-Extra" type="Sprite" parent="Chibi-Godette-128x256/Graphic/Body/Leg-Left-Up"]
+position = Vector2( -0.534737, 8.30193 )
+z_index = 5
+texture = ExtResource( 9 )
+
+[node name="Mask-Left" type="Sprite" parent="Chibi-Godette-128x256/Graphic/Body"]
+position = Vector2( -1.01225, 15.5026 )
+z_index = 5
+texture = ExtResource( 13 )
+
+[node name="Mask-Right" type="Sprite" parent="Chibi-Godette-128x256/Graphic/Body"]
+position = Vector2( 13.1813, 20.2493 )
+z_index = 2
+texture = ExtResource( 16 )
+
+[node name="CollisionBox" type="CollisionShape2D" parent="Chibi-Godette-128x256"]
+shape = SubResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Chibi-Godette-128x256"]
+autoplay = "Idle"
+anims/Dash = ExtResource( 23 )
+anims/Death = ExtResource( 25 )
+anims/Fall = ExtResource( 2 )
+anims/Idle = ExtResource( 26 )
+anims/Jump = ExtResource( 4 )
+anims/Run = ExtResource( 24 )
+anims/Walk = ExtResource( 5 )
+
+[node name="AnimationTree" type="AnimationTree" parent="Chibi-Godette-128x256"]
+tree_root = SubResource( 28 )
+anim_player = NodePath("../AnimationPlayer")
+parameters/playback = SubResource( 29 )
+
+[node name="Chibi-Godette-256x512" parent="." instance=ExtResource( 3 )]
+position = Vector2( -324, 298.097 )
+script = ExtResource( 1 )
+
+[node name="Chibi-Godette-512-1024" parent="." instance=ExtResource( 28 )]
+position = Vector2( 700, 74.203 )
+script = ExtResource( 1 )
+
+[node name="Ground" type="StaticBody2D" parent="."]
+position = Vector2( 0, 576 )
+z_index = -2
+collision_layer = 2
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground"]
+position = Vector2( 0, -29 )
+shape = SubResource( 30 )
+one_way_collision = true
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="Top" type="Sprite" parent="Ground/CollisionShape2D"]
+position = Vector2( 0, 29 )
+texture = ExtResource( 21 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 3000, 128 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Fill" type="Sprite" parent="Ground/CollisionShape2D"]
+position = Vector2( 0, 283 )
+texture = ExtResource( 11 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 3000, 384 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 0, 411 )
+offset = Vector2( 0, -400 )
+current = true
+zoom = Vector2( 2, 2 )
+smoothing_speed = 25.0
+drag_margin_top = 0.5
+drag_margin_bottom = 0.1
+
+[node name="GUI" type="CanvasLayer" parent="."]
+pause_mode = 2
+
+[node name="Control" type="Control" parent="GUI"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="GUI/Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer" type="MarginContainer" parent="GUI/Control/VBoxContainer"]
+margin_right = 1280.0
+margin_bottom = 626.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_right = 200
+custom_constants/margin_top = 30
+custom_constants/margin_left = 60
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="GUI/Control/VBoxContainer/MarginContainer"]
+margin_left = 60.0
+margin_top = 30.0
+margin_right = 1080.0
+margin_bottom = 626.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer" type="MarginContainer" parent="GUI/Control/VBoxContainer/MarginContainer/HBoxContainer"]
+margin_right = 142.0
+margin_bottom = 596.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_top = 384
+custom_constants/margin_bottom = 128
+
+[node name="Panel" type="Control" parent="GUI/Control/VBoxContainer/MarginContainer/HBoxContainer/MarginContainer"]
+self_modulate = Color( 1, 1, 1, 0.439216 )
+margin_top = 384.0
+margin_right = 142.0
+margin_bottom = 468.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="IdleButton" type="Button" parent="GUI/Control/VBoxContainer/MarginContainer/HBoxContainer/MarginContainer/Panel"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -64.0
+margin_right = 64.0
+margin_bottom = 32.0
+rect_min_size = Vector2( 128, 32 )
+size_flags_vertical = 0
+text = "Idle"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer2" type="MarginContainer" parent="GUI/Control/VBoxContainer/MarginContainer/HBoxContainer"]
+margin_left = 146.0
+margin_right = 288.0
+margin_bottom = 596.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_top = 320
+custom_constants/margin_bottom = 192
+
+[node name="Panel" type="Control" parent="GUI/Control/VBoxContainer/MarginContainer/HBoxContainer/MarginContainer2"]
+self_modulate = Color( 1, 1, 1, 0.439216 )
+margin_top = 320.0
+margin_right = 142.0
+margin_bottom = 404.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="WalkButton" type="Button" parent="GUI/Control/VBoxContainer/MarginContainer/HBoxContainer/MarginContainer2/Panel"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -64.0
+margin_right = 64.0
+margin_bottom = 32.0
+rect_min_size = Vector2( 128, 32 )
+size_flags_vertical = 0
+text = "Walk"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer3" type="MarginContainer" parent="GUI/Control/VBoxContainer/MarginContainer/HBoxContainer"]
+margin_left = 292.0
+margin_right = 434.0
+margin_bottom = 596.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_top = 256
+custom_constants/margin_bottom = 256
+
+[node name="Panel" type="Control" parent="GUI/Control/VBoxContainer/MarginContainer/HBoxContainer/MarginContainer3"]
+self_modulate = Color( 1, 1, 1, 0.439216 )
+margin_top = 256.0
+margin_right = 142.0
+margin_bottom = 340.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="RunButton" type="Button" parent="GUI/Control/VBoxContainer/MarginContainer/HBoxContainer/MarginContainer3/Panel"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -64.0
+margin_right = 64.0
+margin_bottom = 32.0
+rect_min_size = Vector2( 128, 32 )
+size_flags_vertical = 0
+text = "Run"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer4" type="MarginContainer" parent="GUI/Control/VBoxContainer/MarginContainer/HBoxContainer"]
+margin_left = 438.0
+margin_right = 580.0
+margin_bottom = 596.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_top = 192
+custom_constants/margin_bottom = 320
+
+[node name="Panel" type="Control" parent="GUI/Control/VBoxContainer/MarginContainer/HBoxContainer/MarginContainer4"]
+self_modulate = Color( 1, 1, 1, 0.439216 )
+margin_top = 192.0
+margin_right = 142.0
+margin_bottom = 276.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="DashButton" type="Button" parent="GUI/Control/VBoxContainer/MarginContainer/HBoxContainer/MarginContainer4/Panel"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -64.0
+margin_right = 64.0
+margin_bottom = 32.0
+rect_min_size = Vector2( 128, 32 )
+size_flags_vertical = 0
+text = "Dash"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer5" type="MarginContainer" parent="GUI/Control/VBoxContainer/MarginContainer/HBoxContainer"]
+margin_left = 584.0
+margin_right = 726.0
+margin_bottom = 596.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_top = 128
+custom_constants/margin_bottom = 384
+
+[node name="Panel" type="Control" parent="GUI/Control/VBoxContainer/MarginContainer/HBoxContainer/MarginContainer5"]
+self_modulate = Color( 1, 1, 1, 0.439216 )
+margin_top = 128.0
+margin_right = 142.0
+margin_bottom = 212.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="JumpButton" type="Button" parent="GUI/Control/VBoxContainer/MarginContainer/HBoxContainer/MarginContainer5/Panel"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -64.0
+margin_right = 64.0
+margin_bottom = 32.0
+rect_min_size = Vector2( 128, 32 )
+size_flags_vertical = 0
+text = "Jump"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer6" type="MarginContainer" parent="GUI/Control/VBoxContainer/MarginContainer/HBoxContainer"]
+margin_left = 730.0
+margin_right = 872.0
+margin_bottom = 596.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_top = 64
+custom_constants/margin_bottom = 448
+
+[node name="Panel" type="Control" parent="GUI/Control/VBoxContainer/MarginContainer/HBoxContainer/MarginContainer6"]
+self_modulate = Color( 1, 1, 1, 0.439216 )
+margin_top = 64.0
+margin_right = 142.0
+margin_bottom = 148.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="FallButton" type="Button" parent="GUI/Control/VBoxContainer/MarginContainer/HBoxContainer/MarginContainer6/Panel"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -64.0
+margin_right = 64.0
+margin_bottom = 32.0
+rect_min_size = Vector2( 128, 32 )
+size_flags_vertical = 0
+text = "Fall"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer7" type="MarginContainer" parent="GUI/Control/VBoxContainer/MarginContainer/HBoxContainer"]
+margin_left = 876.0
+margin_right = 1020.0
+margin_bottom = 596.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_bottom = 512
+
+[node name="Panel" type="Control" parent="GUI/Control/VBoxContainer/MarginContainer/HBoxContainer/MarginContainer7"]
+self_modulate = Color( 1, 1, 1, 0.439216 )
+margin_right = 144.0
+margin_bottom = 84.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="DeathButton" type="Button" parent="GUI/Control/VBoxContainer/MarginContainer/HBoxContainer/MarginContainer7/Panel"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -64.0
+margin_right = 64.0
+margin_bottom = 32.0
+rect_min_size = Vector2( 128, 32 )
+size_flags_vertical = 0
+text = "Death"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="GUI/Control/VBoxContainer"]
+self_modulate = Color( 1, 1, 1, 0.137255 )
+margin_top = 630.0
+margin_right = 1280.0
+margin_bottom = 720.0
+rect_min_size = Vector2( 1280, 90 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="GUI/Control/VBoxContainer/Panel"]
+margin_left = 190.0
+margin_top = 43.0
+margin_right = 253.0
+margin_bottom = 57.0
+text = "128 x 256"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="GUI/Control/VBoxContainer/Panel"]
+margin_left = 450.0
+margin_top = 43.0
+margin_right = 513.0
+margin_bottom = 57.0
+text = "256 x 512"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="GUI/Control/VBoxContainer/Panel"]
+margin_left = 960.0
+margin_top = 43.0
+margin_right = 1031.0
+margin_bottom = 57.0
+text = "512 x 1024"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" type="NinePatchRect" parent="GUI/Control"]
+margin_left = 20.0
+margin_top = 20.0
+margin_right = 420.0
+margin_bottom = 263.0
+texture = ExtResource( 29 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="button_down" from="GUI/Control/VBoxContainer/MarginContainer/HBoxContainer/MarginContainer/Panel/IdleButton" to="." method="_on_IdleButton_button_down"]
+[connection signal="button_down" from="GUI/Control/VBoxContainer/MarginContainer/HBoxContainer/MarginContainer2/Panel/WalkButton" to="." method="_on_WalkButton_button_down"]
+[connection signal="button_down" from="GUI/Control/VBoxContainer/MarginContainer/HBoxContainer/MarginContainer3/Panel/RunButton" to="." method="_on_RunButton_button_down"]
+[connection signal="button_down" from="GUI/Control/VBoxContainer/MarginContainer/HBoxContainer/MarginContainer4/Panel/DashButton" to="." method="_on_DashButton_button_down"]
+[connection signal="button_down" from="GUI/Control/VBoxContainer/MarginContainer/HBoxContainer/MarginContainer5/Panel/JumpButton" to="." method="_on_JumpButton_button_down"]
+[connection signal="button_down" from="GUI/Control/VBoxContainer/MarginContainer/HBoxContainer/MarginContainer6/Panel/FallButton" to="." method="_on_FallButton_button_down"]
+[connection signal="button_down" from="GUI/Control/VBoxContainer/MarginContainer/HBoxContainer/MarginContainer7/Panel/DeathButton" to="." method="_on_DeathButton_button_down"]

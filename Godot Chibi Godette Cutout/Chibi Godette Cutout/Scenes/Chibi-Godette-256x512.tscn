@@ -1,0 +1,244 @@
+[gd_scene load_steps=52 format=2]
+
+[ext_resource path="res://Chibi Godette Cutout/Art/Chibi Godette Cutout 256 x 512/Hand-Right.png" type="Texture" id=1]
+[ext_resource path="res://Chibi Godette Cutout/Art/Chibi Godette Cutout 256 x 512/Face.png" type="Texture" id=2]
+[ext_resource path="res://Chibi Godette Cutout/Art/Chibi Godette Cutout 256 x 512/Mask-Left.png" type="Texture" id=3]
+[ext_resource path="res://Chibi Godette Cutout/Art/Chibi Godette Cutout 256 x 512/Hand-Left.png" type="Texture" id=4]
+[ext_resource path="res://Chibi Godette Cutout/Animation/Anim-256x512/IdleAnim256x512.tres" type="Animation" id=5]
+[ext_resource path="res://Chibi Godette Cutout/Art/Chibi Godette Cutout 256 x 512/Leg-Left-Top.png" type="Texture" id=6]
+[ext_resource path="res://Chibi Godette Cutout/Art/Chibi Godette Cutout 256 x 512/Extra-Left.png" type="Texture" id=7]
+[ext_resource path="res://Chibi Godette Cutout/Art/Chibi Godette Cutout 256 x 512/Mask-Right.png" type="Texture" id=8]
+[ext_resource path="res://Chibi Godette Cutout/Art/Chibi Godette Cutout 256 x 512/Leg-Right-Top.png" type="Texture" id=9]
+[ext_resource path="res://Chibi Godette Cutout/Art/Chibi Godette Cutout 256 x 512/Leg-Left-Lower.png" type="Texture" id=10]
+[ext_resource path="res://Chibi Godette Cutout/Art/Chibi Godette Cutout 256 x 512/Arm-Right.png" type="Texture" id=11]
+[ext_resource path="res://Chibi Godette Cutout/Art/Chibi Godette Cutout 256 x 512/Arm-Left.png" type="Texture" id=12]
+[ext_resource path="res://Chibi Godette Cutout/Art/Chibi Godette Cutout 256 x 512/Leg-Right-Lower.png" type="Texture" id=13]
+[ext_resource path="res://Chibi Godette Cutout/Animation/Anim-256x512/DeathAnim256x512.tres" type="Animation" id=14]
+[ext_resource path="res://Chibi Godette Cutout/Art/Chibi Godette Cutout 256 x 512/Body.png" type="Texture" id=15]
+[ext_resource path="res://Chibi Godette Cutout/Animation/Anim-256x512/JumpAnim256x512.tres" type="Animation" id=16]
+[ext_resource path="res://Chibi Godette Cutout/Art/Chibi Godette Cutout 256 x 512/Neck.png" type="Texture" id=17]
+[ext_resource path="res://Chibi Godette Cutout/Art/Chibi Godette Cutout 256 x 512/Foot.png" type="Texture" id=18]
+[ext_resource path="res://Chibi Godette Cutout/Animation/Anim-256x512/FallAnim256x512.tres" type="Animation" id=19]
+[ext_resource path="res://Chibi Godette Cutout/Animation/Anim-256x512/RunAnim256x512.tres" type="Animation" id=20]
+[ext_resource path="res://Chibi Godette Cutout/Animation/Anim-256x512/Dash2Anim256x512.tres" type="Animation" id=21]
+[ext_resource path="res://Chibi Godette Cutout/Animation/Anim-256x512/WalkAnim256x512.tres" type="Animation" id=22]
+
+
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 42, 224 )
+
+[sub_resource type="AnimationNodeAnimation" id=2]
+animation = "Dash"
+
+[sub_resource type="AnimationNodeAnimation" id=3]
+animation = "Death"
+
+[sub_resource type="AnimationNodeAnimation" id=4]
+animation = "Fall"
+
+[sub_resource type="AnimationNodeAnimation" id=5]
+animation = "Idle"
+
+[sub_resource type="AnimationNodeAnimation" id=6]
+animation = "Jump"
+
+[sub_resource type="AnimationNodeAnimation" id=7]
+animation = "Run"
+
+[sub_resource type="AnimationNodeAnimation" id=8]
+animation = "Walk"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=9]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=10]
+xfade_time = 0.05
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=11]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=12]
+xfade_time = 0.1
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=13]
+xfade_time = 0.1
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=14]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=15]
+xfade_time = 0.05
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=16]
+xfade_time = 0.05
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=17]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=18]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=19]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=20]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=21]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=22]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=23]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=24]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=25]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=26]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=27]
+
+[sub_resource type="AnimationNodeStateMachine" id=28]
+states/Dash/node = SubResource( 2 )
+states/Dash/position = Vector2( 412.734, 590.124 )
+states/Death/node = SubResource( 3 )
+states/Death/position = Vector2( 208, 329.627 )
+states/Fall/node = SubResource( 4 )
+states/Fall/position = Vector2( 564, 22 )
+states/Idle/node = SubResource( 5 )
+states/Idle/position = Vector2( 999, 165 )
+states/Jump/node = SubResource( 6 )
+states/Jump/position = Vector2( 407, -145 )
+states/Run/node = SubResource( 7 )
+states/Run/position = Vector2( -100, 184 )
+states/Walk/node = SubResource( 8 )
+states/Walk/position = Vector2( 1039.73, 250.124 )
+transitions = [ "Idle", "Run", SubResource( 9 ), "Run", "Idle", SubResource( 10 ), "Idle", "Jump", SubResource( 11 ), "Run", "Jump", SubResource( 12 ), "Jump", "Fall", SubResource( 13 ), "Fall", "Idle", SubResource( 14 ), "Run", "Fall", SubResource( 15 ), "Idle", "Fall", SubResource( 16 ), "Fall", "Death", SubResource( 17 ), "Idle", "Death", SubResource( 18 ), "Run", "Death", SubResource( 19 ), "Idle", "Walk", SubResource( 20 ), "Walk", "Idle", SubResource( 21 ), "Dash", "Fall", SubResource( 22 ), "Dash", "Jump", SubResource( 23 ), "Dash", "Idle", SubResource( 24 ), "Run", "Dash", SubResource( 25 ), "Idle", "Dash", SubResource( 26 ), "Dash", "Death", SubResource( 27 ) ]
+start_node = "Idle"
+graph_offset = Vector2( -87.266, -172.876 )
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=29]
+
+[node name="Godette-256x512" type="KinematicBody2D"]
+z_index = 3
+collision_mask = 2
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Graphic" type="Node2D" parent="."]
+position = Vector2( 0, 19.5 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Body" type="Sprite" parent="Graphic"]
+position = Vector2( 0, 0.8 )
+rotation = 0.0349066
+z_index = 1
+texture = ExtResource( 15 )
+
+[node name="Neck" type="Sprite" parent="Graphic/Body"]
+position = Vector2( 0.668, -72.286 )
+rotation = 0.0261799
+z_index = -1
+texture = ExtResource( 17 )
+
+[node name="Face" type="Sprite" parent="Graphic/Body/Neck"]
+position = Vector2( -20.192, -98.578 )
+z_index = 3
+texture = ExtResource( 2 )
+
+[node name="Arm-Right-Up" type="Sprite" parent="Graphic/Body"]
+position = Vector2( 24.896, -47.62 )
+rotation = -0.10472
+z_index = -1
+texture = ExtResource( 11 )
+offset = Vector2( -1.238, 28.96 )
+
+[node name="Hand-Right" type="Sprite" parent="Graphic/Body/Arm-Right-Up"]
+position = Vector2( 2.8, 63.176 )
+rotation = 0.026359
+texture = ExtResource( 1 )
+offset = Vector2( 17.32, 35.658 )
+
+[node name="Arm-Left-Up" type="Sprite" parent="Graphic/Body"]
+position = Vector2( -26.912, -49.004 )
+rotation = 0.10472
+z_index = 5
+texture = ExtResource( 12 )
+offset = Vector2( -4.988, 29.698 )
+
+[node name="Hand-Left" type="Sprite" parent="Graphic/Body/Arm-Left-Up"]
+position = Vector2( -8.08, 62.846 )
+rotation = -0.218166
+z_index = 6
+texture = ExtResource( 4 )
+offset = Vector2( 2.564, 36.432 )
+
+[node name="Leg-Right-Up" type="Sprite" parent="Graphic/Body"]
+position = Vector2( 11.2, 44 )
+rotation = -0.349066
+z_index = 1
+texture = ExtResource( 9 )
+offset = Vector2( 0.004, 38.95 )
+
+[node name="Leg-Right-Bot" type="Sprite" parent="Graphic/Body/Leg-Right-Up"]
+position = Vector2( -1.2, 81.966 )
+rotation = 0.301493
+texture = ExtResource( 13 )
+offset = Vector2( -2.486, 34.968 )
+
+[node name="Foot-Right" type="Sprite" parent="Graphic/Body/Leg-Right-Up/Leg-Right-Bot"]
+position = Vector2( -11.956, 71.714 )
+texture = ExtResource( 18 )
+offset = Vector2( 16.396, -1.67 )
+
+[node name="Leg-Left-Up" type="Sprite" parent="Graphic/Body"]
+position = Vector2( -12.6, 44 )
+rotation = 0.00523599
+z_index = 4
+texture = ExtResource( 6 )
+offset = Vector2( 0.004, 38.95 )
+
+[node name="Leg-Left-Bot" type="Sprite" parent="Graphic/Body/Leg-Left-Up"]
+position = Vector2( -1.2, 81.966 )
+rotation = 0.0959931
+texture = ExtResource( 10 )
+offset = Vector2( -2.486, 34.968 )
+
+[node name="Foot-Left" type="Sprite" parent="Graphic/Body/Leg-Left-Up/Leg-Left-Bot"]
+position = Vector2( -11.956, 71.714 )
+rotation = -0.124227
+texture = ExtResource( 18 )
+offset = Vector2( 16.396, -1.67 )
+
+[node name="Pants-Left-Extra" type="Sprite" parent="Graphic/Body/Leg-Left-Up"]
+position = Vector2( -1.07, 16.604 )
+z_index = 5
+texture = ExtResource( 7 )
+
+[node name="Mask-Left" type="Sprite" parent="Graphic/Body"]
+position = Vector2( -1.012, 31.006 )
+z_index = 5
+texture = ExtResource( 3 )
+
+[node name="Mask-Right" type="Sprite" parent="Graphic/Body"]
+position = Vector2( 27.4, 40.498 )
+z_index = 2
+texture = ExtResource( 8 )
+
+[node name="CollisionBox" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "Idle"
+anims/Dash = ExtResource( 21 )
+anims/Death = ExtResource( 14 )
+anims/Fall = ExtResource( 19 )
+anims/Idle = ExtResource( 5 )
+anims/Jump = ExtResource( 16 )
+anims/Run = ExtResource( 20 )
+anims/Walk = ExtResource( 22 )
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+tree_root = SubResource( 28 )
+anim_player = NodePath("../AnimationPlayer")
+parameters/playback = SubResource( 29 )

@@ -1,0 +1,4 @@
+Chibi Godette Cutout is a game asset base on Godette, a character made by Andrea Calabrò for the Godot game engine, under CC BY 4.0 International license.
+
+License Link
+https://github.com/godotengine/godot-design/blob/master/LICENSE
